@@ -1,0 +1,431 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+*, *:after, *:before { 
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+body, html {  
+	padding: 0; 
+	margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    /*background-color: #fff;*/
+    margin: auto 0;
+    margin-right: -10px;
+    padding: 0;
+    margin: 0;
+    cursor: auto;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+
+}
+
+a, a:hover, a:link {
+	text-decoration: none;
+	color: red;
+	cursor: auto;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header {
+	width: 100%;
+	background-image: url("../images/nav-bar-image.jpg");
+    background-repeat: repeat-x;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+}
+.main_wrapper {
+	width: 100%;
+}
+.title__wrapper {
+	padding: 2rem 4rem 7rem;
+}
+
+.logo {
+	float: left;
+	/*margin:;*/
+	margin-top: -2.5%;
+	display: inline;
+}	
+
+/* Effect 9: second text and borders */
+
+.nav_effect {
+	background: #000;
+}
+.cl-effect-9 a {
+	margin: 0 20px;
+	padding: 18px 20px;
+	float: right;
+	color: #FFF;
+	text-decoration: none;
+
+}
+
+.cl-effect-9 a::before,
+.cl-effect-9 a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+.cl-effect-9 a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-9 a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.cl-effect-9 a span:last-child {
+	z-index: 1;
+	display: block;
+	padding: 8px 0 0 0;
+	color: rgba(255,255,255);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: 0.8em;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:focus::before {
+	height: 6px;
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:hover::after,
+.cl-effect-9 a:focus::before,
+.cl-effect-9 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cl-effect-9 a:hover span:last-child,
+.cl-effect-9 a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+/* frame div */
+
+.frame_wrapper {
+	width: 100%;
+	height: 650px;
+	padding-top: 5%;
+	background-image: url("../images/background_paper.jpg");
+	background-repeat: fixed;
+	
+}
+.frame-1,.frame-2,.frame-3 {
+	float: center;
+	position: absolute;
+	padding-left: 30%;
+}
+
+.frame-2 {
+	margin-left: 18%;
+}
+
+/* board div -- SKillZ Set Bruh! */
+
+.board_wrapper {
+	width: 100%;
+	height: 600px;/*
+	margin-top: 37%;*/
+	padding-right: 10%;
+	padding-left: 10%;
+	background-color: #B89264;
+}
+
+.expert_wrap {
+	display: flex;
+	width: 100%;
+	height: 600px;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #000;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  background-color: #fff;
+  padding: 10px;
+  width: 478.5px;
+  height: 300px;
+  margin: .05%;
+  line-height: 150px;
+  color: #000;
+  font-size: 2em;
+  text-align: center;
+}
+
+.board-1,.board-2,.board-3,.board-4,.board-5,.board-6,.board-7,.board-8,.board-9 {
+	margin-top: 4%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 2%;
+	float: right;
+	width: 120px;
+	height: 140px;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	-o-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+
+.board-4,.board-5,.board-6,.board-7,.board-8,.board-9 {
+	height: 120px;
+}
+
+.board-1:hover,.board-2:hover,.board-3:hover,.board-4:hover,.board-5:hover,.board-6:hover,.board-7:hover,.board-8:hover,.board-9:hover {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg); /* IE9 */
+	-webkit-transform: rotate(360deg); /* Safari and Chrome */
+	-o-transform: rotate(360deg); /* Opera */
+	-moz-transform: rotate(360deg); /* FireFox */
+}
+
+/* Portfolio */
+
+.about_content {
+	float: left;
+	padding-top: 7%;
+	margin-right: 2%;
+	font-family: 'Abel' , sans-serif;
+	font-weight: 400;
+	font-size: 1.5em;
+	letter-spacing: 1pt;
+	line-height: 30pt;
+	color: #000;
+}
+
+.portfolio_wrapper {
+	width: 100%;
+	background-color: #000;
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+.portfolio_scope {
+	height: 400px;
+	padding-left: 5%;
+	padding-right: 5%;
+
+}
+
+.scope-1,.scope-2,.scope-3 {
+	content: ' ';
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 5%;
+	margin-right: 4%;
+	z-index: 1;
+	background: rgba(38,38,38,.85);
+	transition: 0.5s;
+}
+
+/* Contact Information */
+
+.contact_wrapper {
+	width: 100%;
+	padding-top: 5%;
+	padding-left: 20%;/*
+	padding-right: 2%;*/
+	background-image: url("../images/background_paper.jpg");
+	background-repeat: repeat-x;
+}
+
+.contact_content {
+	text-align: center;
+	width: 800px;
+	font-family: 'Abel' , sans-serif;
+	font-weight: 400;
+	font-size: 15pt;
+	letter-spacing: 1pt;
+	line-height: 25pt;
+	color: #000;
+	padding-bottom: 3%;
+	border-bottom: 1px solid #6F6F6F;
+	
+}
+
+.form, label {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-family: 'Abel' , sans-serif;
+	font-weight: 400;
+	font-size: 15pt;
+	letter-spacing: 1pt;
+	line-height: 25pt;
+	color: #000;
+}
+
+.contact_name,.contact_email,.contact_msg,.contact_button {
+	padding-top: 3%;
+} 
+
+input[type="text"], input[type="mail"], textarea[id="msg"] {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-family: 'Abel' , sans-serif;
+	font-weight: 400;
+	font-size: 15pt;
+	letter-spacing: 1pt;
+	padding: 8px 13px 8px 13px;
+	border: 1px solid #6F6F6F;
+	background: transparent;
+	outline: none;/*
+	box-shadow: 0px 0 5px rgba(0,0,0,10);*/
+	-webkit-appearance: none;
+	width: 800px;
+}
+
+input { 
+	-webkit-rtl-ordering: logical;
+	user-select: text;
+	cursor: auto;
+}
+
+#msg {
+	width: 800px;
+	height: 200px;
+}
+
+button[type="submit"] {
+	margin-top: 5px;
+	margin-bottom: 5%;
+	margin-left: 31%;
+	font-family: 'Abel' , sans-serif;
+	font-weight: 400;
+	font-size: 15pt;
+	letter-spacing: 1pt;
+	padding: 8px 13px 8px 13px;
+	border: 1px solid #6F6F6F;
+	color: #FFF;
+	background: #EF2615;
+	outline: none;/*
+	box-shadow: 0px 0 5px rgba(0,0,0,10);*/
+	-webkit-appearance: none;
+	width: 150px;
+}
+
+/*.help-inline,.help-block,.error {
+	font-size: 8pt;
+	color: #666666;
+	letter-spacing: 1pt;
+}*/
+
+/* Page Up */
+
+.arrow {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	display: inline-block;
+	margin-bottom: 10px;
+	
+}
+
+
+
+
+
+
+
+
